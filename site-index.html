@@ -1,4 +1,194 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MiRo Digital Tools — Apps</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><style>:root{--bg:#05101e;--panel:#0a1929;--panel2:#0d2040;--border:#142d4a;--border2:#1e3f60;--text:#e8f1ff;--muted:#7a99bc;--accent:#e8392a;--accent2:#ff6b5b;--green:#37d67a;--yellow:#f7b731;--cyan:#27d3ff;--purple:#b277ff}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;min-height:100vh;position:relative;background-image:radial-gradient(900px 500px at 12% -8%,rgba(232,57,42,.10),transparent 60%),radial-gradient(900px 500px at 100% 0%,rgba(39,211,255,.07),transparent 55%)}body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.025}.wrap{max-width:1180px;margin:0 auto;padding:0 22px}header{border-bottom:1px solid var(--border);background:linear-gradient(180deg,rgba(13,32,64,.55),rgba(5,16,30,0));padding:46px 0 38px}.hwrap{display:flex;flex-wrap:wrap;align-items:center;gap:26px}.logo{width:104px;height:104px;border-radius:24px;flex:none;background:#000;border:1px solid var(--border2);box-shadow:0 14px 40px rgba(0,0,0,.5),0 0 0 4px rgba(255,255,255,.02);object-fit:cover}.brandcol{flex:1 1 280px;min-width:260px}.brandname{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,4.4vw,42px);letter-spacing:-.5px;line-height:1.05}.brandname span{background:linear-gradient(90deg,#ff6bd6,#b277ff 45%,#27d3ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.devname{font-family:'DM Mono',monospace;font-size:13px;color:var(--muted);margin-top:8px;letter-spacing:.4px}.devname b{color:var(--text);font-weight:500}.contacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:11px;font-size:13px;text-decoration:none;color:var(--text);background:var(--panel2);border:1px solid var(--border2);transition:.18s}.chip:hover{border-color:var(--accent2);background:#12274a;transform:translateY(-2px)}.chip svg{width:16px;height:16px;flex:none;fill:currentColor}.chip.muted{color:var(--muted)}.chip-btn{cursor:pointer;font-family:inherit;font-size:13px}.chip-btn svg:last-child{width:13px;height:13px;opacity:.7;transition:transform .18s}.chip-dd{position:relative;display:inline-block}.chip-dd.open .chip-btn svg:last-child{transform:rotate(180deg)}.dd-menu{position:absolute;top:calc(100%+6px);left:0;z-index:20;min-width:180px;padding:6px;border-radius:12px;background:var(--panel2);border:1px solid var(--border2);box-shadow:0 14px 36px rgba(0,0,0,.5);opacity:0;visibility:hidden;transform:translateY(-6px);transition:.16s}.chip-dd.open .dd-menu{opacity:1;visibility:visible;transform:translateY(0)}.dd-item{display:block;padding:9px 12px;border-radius:8px;font-size:13px;color:var(--text);text-decoration:none;transition:.13s}.dd-item:hover{background:#12274a;color:var(--accent2)}.intro{padding:42px 0 8px}.eyebrow{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan)}.intro h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(26px,3.6vw,38px);margin-top:10px;letter-spacing:-.5px}.intro p{color:var(--muted);max-width:640px;margin-top:12px;font-size:15.5px}.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;padding:34px 0 10px}.card{flex:1 1 340px;max-width:380px;--c:var(--accent);--c2:var(--accent2);position:relative;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--border);border-radius:20px;padding:24px;transition:.22s}.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--c),var(--c2))}.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 18px 48px rgba(0,0,0,.45)}.chead{display:flex;gap:16px;align-items:flex-start}.icon{width:74px;height:74px;border-radius:18px;flex:none;background:#000;border:1px solid var(--border2);object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.03),0 8px 22px rgba(0,0,0,.45)}.ctitle{flex:1;min-width:0}.ctitle h3{font-family:'Syne',sans-serif;font-weight:700;font-size:19px;line-height:1.2}.ver{display:inline-block;margin-top:7px;font-family:'DM Mono',monospace;font-size:11.5px;padding:3px 9px;border-radius:7px;color:var(--c2);background:color-mix(in srgb,var(--c) 16%,transparent);border:1px solid color-mix(in srgb,var(--c) 40%,transparent)}.overview{color:var(--muted);font-size:14px;margin:16px 0 18px}.note{display:flex;gap:10px;align-items:flex-start;background:rgba(247,183,49,.07);border:1px solid rgba(247,183,49,.32);border-left:3px solid var(--yellow);border-radius:12px;padding:12px 14px;margin:0 0 18px;font-size:12.8px;color:#f4e6c6}.note svg{width:18px;height:18px;fill:var(--yellow);flex:none;margin-top:1px}.note b{color:var(--yellow);font-weight:500}.note.info{background:rgba(39,211,255,.07);border-color:rgba(39,211,255,.30);border-left-color:var(--cyan);color:#cdeefb}.note.info svg{fill:var(--cyan)}.note.info b{color:var(--cyan)}.note.tip{background:rgba(55,214,122,.07);border-color:rgba(55,214,122,.30);border-left-color:var(--green);color:#d2f5e0}.note.tip svg{fill:var(--green)}.note.tip b{color:var(--green)}.dlnote{display:flex;gap:7px;align-items:flex-start;font-size:11.5px;color:var(--muted);margin:-8px 0 18px;line-height:1.45}.dlnote+.dlnote{margin-top:-12px}.dlnote svg{width:14px;height:14px;fill:var(--cyan);flex:none;margin-top:2px}.seclabel{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:0 0 9px}.btns{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:18px}.btn{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:13px;padding:9px 13px;border-radius:10px;transition:.16s;border:1px solid var(--border2);color:var(--text);background:var(--panel2)}.btn svg{width:15px;height:15px;fill:currentColor;flex:none}.btn:hover{transform:translateY(-2px)}.btn.play{background:linear-gradient(90deg,var(--c),var(--c2));border:none;color:#fff;font-weight:500;box-shadow:0 6px 18px color-mix(in srgb,var(--c) 35%,transparent)}.btn.ext:hover{border-color:var(--c2)}.btn.disabled{opacity:.4;pointer-events:none;font-style:italic}.links{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid var(--border);padding-top:16px}.dl{display:flex;align-items:center;gap:8px;text-decoration:none;font-size:12.5px;color:var(--muted);padding:8px 10px;border-radius:9px;background:rgba(255,255,255,.015);border:1px solid var(--border);transition:.16s}.dl:hover{color:var(--text);border-color:var(--c);background:rgba(255,255,255,.04)}.dl.soon{opacity:.45;pointer-events:none;font-style:italic}.dl svg{width:14px;height:14px;fill:var(--c2);flex:none}footer{border-top:1px solid var(--border);margin-top:48px;padding:30px 0 50px;text-align:center;color:var(--muted);font-size:13px}footer .fsocials{display:flex;justify-content:center;gap:14px;margin-bottom:16px}footer .fsocials a{color:var(--muted);transition:.16s}footer .fsocials a:hover{color:var(--accent2);transform:translateY(-2px)}footer .fsocials svg{width:20px;height:20px;fill:currentColor}footer b{color:var(--text);font-weight:500}@media(max-width:560px){.links{grid-template-columns:1fr}.logo{width:84px;height:84px}}</style></head><body><header><div class="wrap hwrap"><img class="logo" id="brandLogo" alt="MiRo Digital Tools logo"><div class="brandcol"><div class="brandname">MiRo <span>Digital Tools</span></div><div class="devname">Developed by <b id="devName"></b></div><div class="contacts" id="contacts"></div></div></div></header><main class="wrap"><section class="intro"><div class="eyebrow">Our Apps</div><h2>Tools that respect your privacy</h2><p>A growing collection of lightweight, privacy-first Android apps. Every app stores your data locally on your device. Pick one below to download or read its docs.</p></section><section class="grid" id="appGrid"></section></main><footer class="wrap"><div class="fsocials" id="footerSocials"></div><div>&copy; <span id="yr"></span> <b>MiRo Digital Tools</b> &middot; Developed by <b id="devName2"></b> &middot; All rights reserved</div></footer><script>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>MiRo Digital Tools — Apps</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+:root{
+  --bg:#05101e; --panel:#0a1929; --panel2:#0d2040;
+  --border:#142d4a; --border2:#1e3f60;
+  --text:#e8f1ff; --muted:#7a99bc;
+  --accent:#e8392a; --accent2:#ff6b5b;
+  --green:#37d67a; --yellow:#f7b731; --cyan:#27d3ff; --purple:#b277ff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:'DM Sans',sans-serif; font-weight:300;
+  line-height:1.6; min-height:100vh; position:relative;
+  background-image:
+    radial-gradient(900px 500px at 12% -8%, rgba(232,57,42,.10), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(39,211,255,.07), transparent 55%);
+}
+body::after{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:9999;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity:.025;
+}
+.wrap{max-width:1180px; margin:0 auto; padding:0 22px}
+
+/* ---------- HEADER ---------- */
+header{
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(180deg, rgba(13,32,64,.55), rgba(5,16,30,0));
+  padding:46px 0 38px;
+}
+.hwrap{display:flex; flex-wrap:wrap; align-items:center; gap:26px}
+.logo{
+  width:104px; height:104px; border-radius:24px; flex:none;
+  background:#000; border:1px solid var(--border2);
+  box-shadow:0 14px 40px rgba(0,0,0,.5), 0 0 0 4px rgba(255,255,255,.02);
+  object-fit:cover;
+}
+.brandcol{flex:1 1 280px; min-width:260px}
+.brandname{
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:clamp(28px,4.4vw,42px); letter-spacing:-.5px; line-height:1.05;
+}
+.brandname span{
+  background:linear-gradient(90deg,#ff6bd6,#b277ff 45%,#27d3ff);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+.devname{
+  font-family:'DM Mono',monospace; font-size:13px; color:var(--muted);
+  margin-top:8px; letter-spacing:.4px;
+}
+.devname b{color:var(--text); font-weight:500}
+.contacts{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+.chip{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:9px 14px; border-radius:11px; font-size:13px; text-decoration:none;
+  color:var(--text); background:var(--panel2);
+  border:1px solid var(--border2); transition:.18s;
+}
+.chip:hover{border-color:var(--accent2); background:#12274a; transform:translateY(-2px)}
+.chip svg{width:16px; height:16px; flex:none; fill:currentColor}
+.chip.muted{color:var(--muted)}
+.chip-btn{cursor:pointer; font-family:inherit; font-size:13px}
+.chip-btn svg:last-child{width:13px;height:13px;opacity:.7;transition:transform .18s}
+.chip-dd{position:relative; display:inline-block}
+.chip-dd.open .chip-btn svg:last-child{transform:rotate(180deg)}
+.dd-menu{
+  position:absolute; top:calc(100% + 6px); left:0; z-index:20;
+  min-width:180px; padding:6px; border-radius:12px;
+  background:var(--panel2); border:1px solid var(--border2);
+  box-shadow:0 14px 36px rgba(0,0,0,.5);
+  opacity:0; visibility:hidden; transform:translateY(-6px); transition:.16s;
+}
+.chip-dd.open .dd-menu{opacity:1; visibility:visible; transform:translateY(0)}
+.dd-item{
+  display:block; padding:9px 12px; border-radius:8px; font-size:13px;
+  color:var(--text); text-decoration:none; transition:.13s;
+}
+.dd-item:hover{background:#12274a; color:var(--accent2)}
+
+/* ---------- INTRO ---------- */
+.intro{padding:42px 0 8px}
+.eyebrow{
+  font-family:'DM Mono',monospace; font-size:12px; letter-spacing:3px;
+  text-transform:uppercase; color:var(--cyan);
+}
+.intro h2{
+  font-family:'Syne',sans-serif; font-weight:800;
+  font-size:clamp(26px,3.6vw,38px); margin-top:10px; letter-spacing:-.5px;
+}
+.intro p{color:var(--muted); max-width:640px; margin-top:12px; font-size:15.5px}
+
+/* ---------- APP GRID ---------- */
+.grid{
+  display:flex; flex-wrap:wrap; justify-content:center;
+  gap:24px; padding:34px 0 10px;
+}
+.card{
+  flex:1 1 340px; max-width:380px;
+  --c:var(--accent); --c2:var(--accent2);
+  position:relative; overflow:hidden;
+  background:linear-gradient(180deg,var(--panel2),var(--panel));
+  border:1px solid var(--border); border-radius:20px; padding:24px;
+  transition:.22s;
+}
+.card::before{
+  content:""; position:absolute; inset:0 0 auto 0; height:3px;
+  background:linear-gradient(90deg,var(--c),var(--c2));
+}
+.card:hover{transform:translateY(-4px); border-color:var(--c); box-shadow:0 18px 48px rgba(0,0,0,.45)}
+.chead{display:flex; gap:16px; align-items:flex-start}
+.icon{
+  width:74px; height:74px; border-radius:18px; flex:none; background:#000;
+  border:1px solid var(--border2); object-fit:cover;
+  box-shadow:0 0 0 1px rgba(255,255,255,.03), 0 8px 22px rgba(0,0,0,.45);
+}
+.ctitle{flex:1; min-width:0}
+.ctitle h3{font-family:'Syne',sans-serif; font-weight:700; font-size:19px; line-height:1.2}
+.ver{
+  display:inline-block; margin-top:7px; font-family:'DM Mono',monospace;
+  font-size:11.5px; padding:3px 9px; border-radius:7px;
+  color:var(--c2); background:color-mix(in srgb, var(--c) 16%, transparent);
+  border:1px solid color-mix(in srgb, var(--c) 40%, transparent);
+}
+.overview{color:var(--muted); font-size:14px; margin:16px 0 18px}
+
+.note{
+  display:flex; gap:10px; align-items:flex-start;
+  background:rgba(247,183,49,.07); border:1px solid rgba(247,183,49,.32);
+  border-left:3px solid var(--yellow); border-radius:12px;
+  padding:12px 14px; margin:0 0 18px; font-size:12.8px; color:#f4e6c6;
+}
+.note svg{width:18px;height:18px;fill:var(--yellow);flex:none;margin-top:1px}
+.note b{color:var(--yellow); font-weight:500}
+.note.info{background:rgba(39,211,255,.07); border-color:rgba(39,211,255,.30); border-left-color:var(--cyan); color:#cdeefb}
+.note.info svg{fill:var(--cyan)} .note.info b{color:var(--cyan)}
+.note.tip{background:rgba(55,214,122,.07); border-color:rgba(55,214,122,.30); border-left-color:var(--green); color:#d2f5e0}
+.note.tip svg{fill:var(--green)} .note.tip b{color:var(--green)}
+
+.dlnote{
+  display:flex; gap:7px; align-items:flex-start;
+  font-size:11.5px; color:var(--muted); margin:-8px 0 18px; line-height:1.45;
+}
+.dlnote + .dlnote{margin-top:-12px}
+.dlnote svg{width:14px;height:14px;fill:var(--cyan);flex:none;margin-top:2px}
+
+.seclabel{
+  font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--muted); margin:0 0 9px;
+}
+.btns{display:flex; flex-wrap:wrap; gap:9px; margin-bottom:18px}
+.btn{
+  display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+  font-size:13px; padding:9px 13px; border-radius:10px; transition:.16s;
+  border:1px solid var(--border2); color:var(--text); background:var(--panel2);
+}
+.btn svg{width:15px;height:15px;fill:currentColor;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn.play{
+  background:linear-gradient(90deg,var(--c),var(--c2)); border:none; color:#fff;
+  font-weight:500; box-shadow:0 6px 18px color-mix(in srgb,var(--c) 35%,transparent);
+}
+.btn.ext:hover{border-color:var(--c2)}
+.btn.disabled{opacity:.4; pointer-events:none; font-style:italic}
+
+.links{display:grid; grid-template-columns:1fr 1fr; gap:8px; border-top:1px solid var(--border); padding-top:16px}
+.dl{
+  display:flex; align-items:center; gap:8px; text-decoration:none;
+  font-size:12.5px; color:var(--muted); padding:8px 10px; border-radius:9px;
+  background:rgba(255,255,255,.015); border:1px solid var(--border); transition:.16s;
+}
+.dl:hover{color:var(--text); border-color:var(--c); background:rgba(255,255,255,.04)}
+.dl.soon{opacity:.45; pointer-events:none; font-style:italic}
+.dl svg{width:14px;height:14px;fill:var(--c2);flex:none}
+
+/* ---------- FOOTER ---------- */
+footer{
+  border-top:1px solid var(--border); margin-top:48px; padding:30px 0 50px;
+  text-align:center; color:var(--muted); font-size:13px;
+}
+footer .fsocials{display:flex; justify-content:center; gap:14px; margin-bottom:16px}
+footer .fsocials a{color:var(--muted); transition:.16s}
+footer .fsocials a:hover{color:var(--accent2); transform:translateY(-2px)}
+footer .fsocials svg{width:20px;height:20px;fill:currentColor}
+footer b{color:var(--text); font-weight:500}
+
+@media(max-width:560px){
+  .links{grid-template-columns:1fr}
+  .logo{width:84px;height:84px}
+}
+</style></head><body><header><div class="wrap hwrap"><img class="logo" id="brandLogo" alt="MiRo Digital Tools logo"><div class="brandcol"><div class="brandname">MiRo <span>Digital Tools</span></div><div class="devname">Developed by <b id="devName"></b></div><div class="contacts" id="contacts"></div></div></div></header><main class="wrap"><section class="intro"><div class="eyebrow">Our Apps</div><h2>Tools that respect your privacy</h2><p>A growing collection of lightweight, privacy-first Android apps. Every app stores your data locally on your device. Pick one below to download or read its docs.</p></section><section class="grid" id="appGrid"></section></main><footer class="wrap"><div class="fsocials" id="footerSocials"></div><div>&copy; <span id="yr"></span> <b>MiRo Digital Tools</b> &middot; Developed by <b id="devName2"></b> &middot; All rights reserved</div></footer><script>
 /* ============================================================================
    EASY EDIT ZONE  ============================================================
    Generated by the MiRo App Page Builder. You can also hand-edit below.
@@ -6,7 +196,7 @@
 
 /* ---- 1. DEVELOPER + CONTACT (header) ---- */
 const DEV = {
-  name: "Mark Eumir Turingan",
+  name: "Mark Eumir",
   contacts: [
     { type: "email", label: "Email", value: "mygmail@markeumir.xyz" },
     { type: "facebook", label: "MiRo Digital Tools", value: "https://www.facebook.com/MiRODigitalTools" },
@@ -52,7 +242,7 @@ const APPS = [
     sideloadNote: "Non-playstore links are meant for sideloading the APK manually. Pro features unlock with an unlock code — not Google Play billing. Only use this method if app is not available in Google Playstore.",
     sideloadNote2: "The core app is completely free — no ads, no tracking, just the app doing its job.\nIf the app has been useful to you, support is always appreciated. Most people contribute around $3–5, but anything you feel comfortable with is genuinely appreciated. Every bit goes directly toward development.\n\nFor non-Playstore installations, to unlock Pro features, reach out via email or Facebook Messenger and I'll get you set up. Pro features stay locked until a valid unlock code is entered or your unlock state is restored.",
     play: "https://play.google.com/store/apps/details?id=com.mirodigitaltools.smartcartshopper",
-    external: [{ label: "Direct (rush.mn)", url: "https://rush.mn/xF81bM" }, { label: "Google Drive", url: "https://drive.google.com/file/d/1ODq7M0BKFgquabs2jYNZopuw0i8l8pSp/view" }],
+    external: [{ label: "Direct (rush.mn)", url: "https://rush.mn/xF81bM" }, { label: "Google Drive", url: "https://drive.google.com/file/d/1HCa42PMlvAo1q8r9-QlK_5Yg6407fK1n/view?usp=sharing" }],
     github: {
       overview:   "https://markeumir.github.io/smartcartshopper-site/index.html",
       userguide:  "https://markeumir.github.io/smartcartshopper-site/userguide.html",
