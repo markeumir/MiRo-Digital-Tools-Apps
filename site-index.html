@@ -882,6 +882,14 @@ APPS.forEach(app=>{
     ? `<span class="project-status${app.status==="development"?" development":""}">${app.statusLabel}</span>`
     : "";
 
+  // New project cards show only documentation that exists; legacy cards retain placeholders.
+  const publishedDocs = docs.filter(d=>app.github && app.github[d.k]).map(d=>
+    `<a class="dl" href="${app.github[d.k]}" target="_blank" rel="noopener">${d.i}${d.t}</a>`
+  ).join("");
+  const docBlock = app.status
+    ? (publishedDocs ? `<div class="seclabel">Privacy & Documentation</div><div class="links">${publishedDocs}</div>` : "")
+    : '<div class="seclabel">Documentation</div><div class="links">'+docLinks+'</div>';
+
   card.innerHTML=`
     <div class="chead">
       ${iconHtml}
@@ -896,7 +904,7 @@ APPS.forEach(app=>{
     <div class="seclabel">${app.status==="development"?"Project Status":"Download & Explore"}</div>
     <div class="btns">${playBtn}${extBtns}</div>
     ${dlNote}
-    ${app.status ? "" : '<div class="seclabel">Documentation</div><div class="links">'+docLinks+'</div>'}
+    ${docBlock}
   `;
   grid.appendChild(card);
 });
