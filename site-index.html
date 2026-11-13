@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MiRo Digital Tools — Apps</title>
-<meta name="description" content="A growing collection of lightweight, privacy-first Android apps by MiRo Digital Tools. Every app stores your data locally on your device.">
+<meta name="description" content="A growing collection of lightweight, privacy-first Android apps by MiRo Digital Tools. Local-first tools and optional connected multiplayer games, with per-app privacy information.">
 <meta property="og:title" content="MiRo Digital Tools — Apps">
-<meta property="og:description" content="Lightweight, privacy-first Android apps. Your data stays on your device.">
+<meta property="og:description" content="Lightweight, privacy-focused apps and games. Learn how each app handles data.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="icon" id="favicon" type="image/png" href="">
@@ -288,6 +288,11 @@ header{
 .dl.soon{opacity:.45; pointer-events:none; font-style:italic}
 .dl svg{width:14px;height:14px;fill:var(--c2);flex:none}
 
+
+/* ---------- PROJECT STATUS (new entries only) ---------- */
+.project-thumb{width:74px;height:74px;border-radius:18px;flex:none;border:1px solid var(--border2);background:linear-gradient(145deg,var(--panel2),var(--panel));display:grid;place-items:center;color:var(--c2);font-family:'Syne',sans-serif;font-weight:800;letter-spacing:.2px;font-size:16px}
+.project-status{display:inline-block;margin-top:8px;margin-left:7px;font-size:10.5px;font-weight:500;letter-spacing:.3px;color:var(--green);border:1px solid color-mix(in srgb,var(--green) 38%,transparent);border-radius:8px;padding:3px 8px;background:color-mix(in srgb,var(--green) 9%,transparent)}
+.project-status.development{color:var(--yellow);border-color:color-mix(in srgb,var(--yellow) 38%,transparent);background:color-mix(in srgb,var(--yellow) 9%,transparent)}
 /* ---------- FOOTER ---------- */
 footer{
   border-top:1px solid var(--border); margin-top:48px; padding:30px 0 50px;
@@ -345,6 +350,7 @@ footer b{color:var(--text); font-weight:500}
         <button class="fchip active" data-filter="all">All</button>
         <button class="fchip" data-filter="play">On Play</button>
         <button class="fchip" data-filter="offplay">Off-Play</button>
+        <button class="fchip" data-filter="development">In Development</button>
       </div>
     </div>
   </section>
@@ -482,12 +488,155 @@ const APPS = [
   },
 ];
 
+/* ---- 3B. NOVEMBER 2026 PROJECTS (review candidate) ---- */
+const NEW_PROJECTS = [
+  {
+    "name": "MiRo BINGO — Game & Card",
+    "github": { "privacy": "privacy/miro-bingo-game-card.html" },
+    "icon": "assets/bingo-gold-logo.jpg",
+    "accent": "#e9aa24",
+    "accent2": "#ffdb67",
+    "version": "Web · Live",
+    "status": "available",
+    "statusLabel": "Live · Free",
+    "overview": "A free, ad-free BINGO caller and companion card for family game nights. Play Offline/Manual, use BINGO Sync through Cloudflare Workers, or join privately hosted Linux Sync games. Cloud room usage is limited by hosting quotas; Offline/Manual remains available to everyone.",
+    "sideloadNote": "The Caller and Card launch in your browser. Cloud-hosted BINGO Sync is optional; Offline/Manual play does not use its daily room quota.",
+    "external": [
+      {
+        "label": "Official BINGO homepage",
+        "url": "https://mybingo.markeumir.xyz/"
+      },
+      {
+        "label": "BINGO Caller",
+        "url": "https://bingo.markeumir.xyz/"
+      },
+      {
+        "label": "BINGO Card",
+        "url": "https://bingocard.markeumir.xyz/"
+      }
+    ]
+  },
+  {
+    "name": "MiRo BINGO LAN Edition",
+    "github": { "privacy": "privacy/miro-bingo-lan-edition.html" },
+    "icon": "assets/bingo-gold-logo.jpg",
+    "accent": "#f0b52e",
+    "accent2": "#ffed91",
+    "version": "Android Host · v2.0.1",
+    "status": "available",
+    "statusLabel": "Released · Free",
+    "overview": "Turn a compatible Android phone, tablet or Android/Google TV device into a portable BINGO server. Host games over local Wi-Fi or hotspot without a separate Linux server or Cloudflare daily quota. Players join from a browser using local links or QR codes.",
+    "sideloadNote": "Free and ad-free. Multiplayer needs a local Wi-Fi/hotspot connection; see the homepage for installation and hosting guidance.",
+    "external": [
+      {
+        "label": "LAN Edition overview",
+        "url": "https://mybingo.markeumir.xyz/#LANEdition"
+      },
+      {
+        "label": "APK · MediaFire",
+        "url": "https://www.mediafire.com/file/y275kn7m4cq0h3s/MiRo_BINGO_LAN_Edition_v2.0.1.apk"
+      },
+      {
+        "label": "APK · Google Drive",
+        "url": "https://drive.google.com/file/d/1c9GeQ0IlpUvPPSoXBK-JLCdA201xJCoB/view?usp=drivesdk"
+      }
+    ]
+  },
+  {
+    "name": "MiRo TV Edition",
+    "github": { "privacy": "privacy/miro-tv-edition.html" },
+    "icon": "assets/miro-tv-edition-official-icon.webp",
+    "accent": "#30c4fc",
+    "accent2": "#aa75f9",
+    "version": "v2.0 · Build 34",
+    "status": "available",
+    "statusLabel": "Tested on TCL & Xiaomi",
+    "overview": "A MiRo-customized Android TV / Google TV experience, with TV-focused navigation, home-screen customization, photo wallpapers and screensaver tools. Build 34 passed user acceptance tests on TCL Google TV and Xiaomi TV Box S (3rd Gen). Not for mobile phones or Samsung Tizen TVs.",
+    "screenshots": [
+      "assets/miro-tv-build34-poster.png"
+    ],
+    "sideloadNote": "For Android TV / Google TV only. Back up settings and preserve a known recovery route before replacing a launcher.",
+    "external": [
+      {
+        "label": "APK · MediaFire",
+        "url": "https://rush.mn/fNV4uM"
+      },
+      {
+        "label": "APK · Google Drive",
+        "url": "https://rush.mn/tdpXVB"
+      },
+      {
+        "label": "AFTV download code",
+        "url": "http://aftv.news/1835438"
+      }
+    ]
+  },
+  {
+    "name": "MiRoTV Restore Kit",
+    "github": { "privacy": "privacy/mirotv-restore-kit.html" },
+    "icon": "assets/restore-kit-icon.png",
+    "accent": "#34d6bb",
+    "accent2": "#8fe6ff",
+    "version": "v0.2.4 · Build 16",
+    "status": "available",
+    "statusLabel": "Available · Recovery companion",
+    "overview": "A separate Android TV / Google TV diagnostic and recovery companion for cautious system assessment, backup planning and guided repair workflows. This is not a firmware flashing image and is independent of MiRo TV Edition.",
+    "sideloadNote": "Read the official guide first. Recovery options depend on device support and permissions; protect your data before making system changes.",
+    "external": [
+      {
+        "label": "APK · MediaFire",
+        "url": "https://rush.mn/Uw1zuV"
+      },
+      {
+        "label": "APK · Google Drive",
+        "url": "https://rush.mn/ntmycy"
+      },
+      {
+        "label": "Official guide",
+        "url": "https://rush.mn/ID27yt"
+      }
+    ]
+  },
+  {
+    "name": "Millionaires Game — MiRo Edition",
+    "github": { "privacy": "privacy/millionaires-miro-edition.html" },
+    "icon": "assets/millionaires-concept1-icon.png",
+    "accent": "#e33e39",
+    "accent2": "#ffd16a",
+    "version": "Android v0.2.5 Build 9 · Linux Alpha v0.2.1",
+    "status": "development",
+    "statusLabel": "In development · Private QA",
+    "overview": "An original MiRo Edition property-trading board game for family and close friends. A Linux LAN interactive alpha is deployed, and a native Android host debug QA build has compiled. On-device Android QA and shared-engine integration remain pending; no public release yet.",
+    "note": "The demo is not a verified reproduction of the original 1996 board. Android Build 9 is not production-signed or device-accepted.",
+    "noteType": "info",
+    "external": []
+  },
+  {
+    "name": "Boggles — MiRo Edition",
+    "github": { "privacy": "privacy/boggles-miro-edition.html" },
+    "icon": "assets/boggles-miro-edition-official-icon.webp",
+    "accent": "#e9b321",
+    "accent2": "#50cef0",
+    "version": "Android v1.0 · Build 4",
+    "status": "development",
+    "statusLabel": "In development · QA",
+    "overview": "A free, ad-free, offline word-grid game with letter swipes, solo rounds, scoring and local records. Android Build 4 has compiled, but redesigned UI testing remains pending. LAN multiplayer is a separate workstream, not a released Android-host feature.",
+    "screenshots": [
+      "assets/boggles-build4-home.png"
+    ],
+    "note": "Screenshot from the real development preview. No public production download or LAN-hosting release is available.",
+    "noteType": "info",
+    "external": []
+  }
+];
+APPS.unshift(...NEW_PROJECTS);
+
 /* ---- 4. INTRO SECTION (text under the page heading) ---- */
 const INTRO = {
-  eyebrow: "My Apps",
+  eyebrow: "My Apps & Projects",
   heading: "Tools that respect your privacy. No tracking and Zero ads",
   paragraphs: [
-    "A growing collection of lightweight, privacy-first Android apps. Every app stores your data locally on your device. Pick one below to download or read its docs.",
+    "A growing collection of privacy-minded Android apps, browser tools and family-game projects. Many work offline; optional LAN and cloud-hosted modes are explained on each card. Published tools and development previews are labeled separately.",
     "All of MiRo Digital Tools apps core functionality is completely free — no ads, no tracking, just the app doing its job.\n\nFor non-Playstore installations (sideloading), to unlock Pro features, please reach out via email or Facebook Messenger and I'll get you set up. Pro features stay locked until a valid unlock code is entered or your unlock state is restored. ",
     "NOTE:  I only recommend sideloading if app is not available in Google Playstore.",
     "If the app has been useful to you in any way, support/donation is always appreciated. Most people contribute around $3–5, but anything you feel comfortable with is genuinely appreciated. Every bit goes directly toward development."
@@ -682,7 +831,9 @@ APPS.forEach(app=>{
   ).join("");
 
   // play button
-  let playBtn = app.play
+  let playBtn = app.status==="development"
+    ? `<span class="btn disabled">${SVG.info}Not publicly released</span>`
+    : app.play
     ? `<a class="btn play" href="${app.play}" target="_blank" rel="noopener">${SVG.play}Google Play</a>`
     : `<span class="btn disabled">${SVG.play}Not on Play Store</span>`;
 
@@ -725,23 +876,37 @@ APPS.forEach(app=>{
 
   card.dataset.name = (app.name||"").toLowerCase();
   card.dataset.play = app.play ? "1" : "0";
+  card.dataset.status = app.status||"available";
+  const iconHtml = app.icon
+    ? `<img class="icon" src="${app.icon}" alt="${app.name} app icon" loading="lazy">`
+    : `<div class="project-thumb" aria-label="MiRo project preview; no official app icon displayed">MiRo</div>`;
+  const statusHtml = app.statusLabel
+    ? `<span class="project-status${app.status==="development"?" development":""}">${app.statusLabel}</span>`
+    : "";
+
+  // New project cards show only documentation that exists; legacy cards retain placeholders.
+  const publishedDocs = docs.filter(d=>app.github && app.github[d.k]).map(d=>
+    `<a class="dl" href="${app.github[d.k]}" target="_blank" rel="noopener">${d.i}${d.t}</a>`
+  ).join("");
+  const docBlock = app.status
+    ? (publishedDocs ? `<div class="seclabel">Privacy & Documentation</div><div class="links">${publishedDocs}</div>` : "")
+    : '<div class="seclabel">Documentation</div><div class="links">'+docLinks+'</div>';
 
   card.innerHTML=`
     <div class="chead">
-      <img class="icon" src="${app.icon}" alt="${app.name} icon">
+      ${iconHtml}
       <div class="ctitle">
         <h3>${app.name}</h3>
-        <span class="ver">${app.version}</span>
+        <span class="ver">${app.version}</span>${statusHtml}
       </div>
     </div>
     <p class="overview">${app.overview}</p>
     ${noteBlock}
     ${shotsBlock}
-    <div class="seclabel">Download</div>
+    <div class="seclabel">${app.status==="development"?"Project Status":"Download & Explore"}</div>
     <div class="btns">${playBtn}${extBtns}</div>
     ${dlNote}
-    <div class="seclabel">Documentation</div>
-    <div class="links">${docLinks}</div>
+    ${docBlock}
   `;
   grid.appendChild(card);
 });
@@ -766,7 +931,7 @@ APPS.forEach(app=>{
     let visible=0;
     document.querySelectorAll(".card").forEach(c=>{
       const matchQ = !q || c.dataset.name.includes(q);
-      const matchF = filter==="all" || (filter==="play" && c.dataset.play==="1") || (filter==="offplay" && c.dataset.play==="0");
+      const matchF = filter==="all" || (filter==="play" && c.dataset.play==="1") || (filter==="offplay" && c.dataset.play==="0") || (filter==="development" && c.dataset.status==="development");
       const show = matchQ && matchF;
       c.style.display = show ? "" : "none";
       if(show) visible++;
